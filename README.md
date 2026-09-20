@@ -1,5 +1,11 @@
 # Chat-bot
 
+WELCOME TO A MICROSOFT CHAT BOT INTIAL IDEA
+
+Set up, 
+
+NOTE: File, md.py is standard python, while app.py is to launch on browser
+
 How to set up virtual enviroment, Paste these steps into console:
 
 NOTE: there is good chance that your going to need to copy the code and run it in your own studio
