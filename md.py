@@ -46,7 +46,7 @@ def login():
 
 def microsoft():
     answer = input("Welcome to Microsoft Support. How can I help you?\nPress 1 for unauthorized access\nPress 2 for currency issues\nPress 3 for settings problems\nType 'exit' to quit: ").strip().lower()
-    time.sleep(2)
+    
 
     if answer in ["exit", "quit"]:
         return False
@@ -64,7 +64,7 @@ def microsoft():
             time.sleep(2)
         elif any(word in tokens for word in [ "money", "missing", "unauthorised", "unauthorized"]):
             op1 = input('Would you like to reset your password and enable two-factor authentication? (yes/no): ').strip().lower()
-            time.sleep(2)
+        
             
             # 2FA enabled
             if op1 == 'yes':   
