@@ -44,10 +44,10 @@ def microsoft():
         unauthorised = input("What activity has been noticed on your account? ")
         tokens = process_input(unauthorised)
 
-        # Use NLTK tokens t detect issues dynamically
+       
         if "game" in tokens or "hour" in tokens or "games" in tokens or "hours" in tokens:
             print("We will secure your account and investigate the unauthorized transactions immediately.")
-        elif any(word in tokens for word in [ "money", "missing"]):
+        elif any(word in tokens for word in [ "money", "missing", "unauthorised", "unauthorized"]):
             op1 = input('Would you like to reset your password and enable two-factor authentication? (yes/no): ').strip().lower()
             
             # 2FA enabled
