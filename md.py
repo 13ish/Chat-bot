@@ -45,14 +45,15 @@ def microsoft():
         tokens = process_input(unauthorised)
 
         # Use NLTK tokens t detect issues dynamically
-        if "money" in tokens or "missing" in tokens:
+        if "game" in tokens or "hour" in tokens or "games" in tokens or "hours" in tokens:
             print("We will secure your account and investigate the unauthorized transactions immediately.")
-        elif any(word in tokens for word in ["hour", "hours", "game", "games", "active"]):
+        elif any(word in tokens for word in [ "money", "missing"]):
             op1 = input('Would you like to reset your password and enable two-factor authentication? (yes/no): ').strip().lower()
             
             # 2FA enabled
             if op1 == 'yes':
                 print("Your password has been reset and two-factor authentication has been enabled.")
+                print (" ")
                 number = input('Please provide your contact number to enable two-factor authentication: ')
                 print(f'An SMS with a verification code has been sent to {number}.')
                 
@@ -65,20 +66,30 @@ def microsoft():
             # 2FA not enabled
             elif op1 == 'no':
                 print("We recommend enabling two-factor authentication to secure your account.")
+                print(" ")
                 number = input("Please provide your contact number for further assistance: ")
+                print(" ")
                 print("Thank you. Our support team will reach out to you shortly.")
+
 
     # Currency Issues
     elif answer == "2":
         print("Option 2 selected.")
         currency_issue = input("Please describe the currency issue you are experiencing: ")
+        print(" ")
         tokens = process_input(currency_issue)
 
         if "redeem" in tokens:
             print("We will investigate the currency redemption issue and provide a solution.")
+            print(" ")
         elif any(word in tokens for word in ["appear", "see", "show"]):
             print("We will check your account for any discrepancies and resolve the issue.")
-
+        elif "credit" in tokens or "card" in tokens or "debit" in tokens:
+            print("Please follow the following steps to fix problem")
+            print("1. Make sure that credit card details have been entered correctly ")
+            print(" ")
+            print("2. refresh your page. This can help it windows has recently been experiencing delay")
+            print(" ")
     # Settings Issues       
     elif answer == "3":
         print("Option 3 selected.")
@@ -87,6 +98,8 @@ def microsoft():
 
         if "privacy" in tokens:
             print("We will assist you in changing your privacy settings. Please follow the instructions provided.")
+            print('1. Make sure there account is set to private ')
+            print('2. make sure you refresh your windows settings by shutting off and turning on your computer')
         elif "save" in tokens:
             print("We will investigate why your settings are not saving and provide a solution.")
     else:
