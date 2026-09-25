@@ -1,3 +1,5 @@
+#app.py: All lines with st functions within was from AI, Actual Chatting is from me. All lines containing st. (etc) is from Ai as I wanted to make a browser
+
 import time
 import nltk
 from nltk.stem import WordNetLemmatizer

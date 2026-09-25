@@ -53,7 +53,7 @@ def microsoft():
 
     # Unauthorised Access Issues
     if answer == "1":
-        unauthorised = input("What activity has been noticed on your account? ")
+        unauthorised = input("What activity has been noticed on your account? If unauthorized access, type unauthorized. ")
         tokens = process_input(unauthorised)
         time.sleep(2)
 
@@ -76,8 +76,8 @@ def microsoft():
                 print(f'An SMS with a verification code has been sent to {number}.')
                 print(" ")
                 time.sleep(2)
-                
-                code = input("Enter the verification code: ")
+
+                code = input("Enter the verification code that was sent to your number: ")
                 if code == code:
                     print(" ")
                     print("Two-factor authentication has been successfully enabled on your account.")
@@ -195,7 +195,7 @@ def xbox():
 
 
 
-device = input("Please enter the device you are using (e.g., Windows, Xbox, Surface): ").strip().lower()
+device = input("Please enter the device you are using (e.g., Windows or Xbox): ").strip().lower()
 
 if "windows" in device:
     if login():
